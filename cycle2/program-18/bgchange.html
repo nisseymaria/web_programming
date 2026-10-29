@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<title>Simple Background Chanages</title>
+	<style>
+	body {background-repeat:no-repeat;}
+	</style>
+</head>
+<body>
+	<button onclick="changeColor()">Change color</button>
+	<button onclick="changeBackgroundImage()">Change Background image</button>
+	<button onclick="resetBackground()">Resume to normal</button>
+	
+	<script>
+		const originalColor="white";
+		const originalImage="";
+		
+		function changeColor() {
+			document.body.style.backgroundImage="";
+			document.body.style.backgroundColor="blue";
+		}
+		
+		function changeBackgroundImage() {
+			document.body.style.backgroundImage="url('https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Dogs_love.jpg/960px-Dogs_love.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20221129072427')";
+			document.body.style.backgroundColor="";
+		}
+		
+		function resetBackground() {
+			document.body.style.backgroundColor=originalColor;
+			document.body.style.backgroundImage=originalImage;
+		}
+	</script>
+</body>
+</html>
